@@ -1,74 +1,106 @@
-# Fundamentos de HTML
+<div style="display:flex;align-items:center;gap:12px">
+    <h1 style="margin:0">🚀 Fundamentos de HTML</h1>
+    <img alt="HTML5" src="https://img.shields.io/badge/HTML-%3E%3D5-orange" />
+    <img alt="Learning" src="https://img.shields.io/badge/Level-Básico-brightgreen" />
+</div>
 
-Este repositorio contiene material y ejemplos básicos para aprender y practicar HTML. El objetivo de este proyecto es servir como base didáctica para crear páginas estáticas sencillas, experimentar con estructura de documentos, y gestionar recursos estáticos como imágenes.
+Bienvenido a un conjunto de recursos y ejemplos pensados para aprender HTML creando páginas limpias, semánticas y visualmente atractivas.
 
-## Contenido y propósito
+**Vista previa rápida**
 
-- **Propósito:** Proveer ejemplos sencillos y notas para quien está empezando con HTML.
-- **Audiencia:** Estudiantes, autoaprendizaje y ejercicios prácticos.
+<div style="background:linear-gradient(135deg,#f8f4ff,#e3f7ff);border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 6px 20px rgba(16,24,40,.08)">
+    <strong>Archivo principal:</strong> <a href="blog.html">`blog.html`</a> — abre en el navegador o sirve localmente para ver el contenido.
+</div>
+
+**Índice**
+
+- Descripción
+- Estructura del proyecto
+- Rápido inicio (local)
+- Estética y recursos (tips)
+- Ejemplos de uso y fragmentos
+- Contribuir
+- Licencia y contacto
+
+## Descripción
+
+Este proyecto es una base didáctica: páginas estáticas, ejemplos de marcado semántico y un sitio pequeño tipo blog para practicar. Ideal para estudiantes y proyectos personales.
 
 ## Estructura del proyecto
 
-La carpeta principal para este módulo es la carpeta donde se encuentra este archivo.
+- `blog.html` — ejemplo de página (estructura, artículos, imágenes).
+- `notes.txt` — apuntes, ideas y checklist de mejoras.
+- `imagenes/` — recursos gráficos usados en `blog.html`.
+- `style.css` — (opcional) archivo de estilos que puedes enlazar desde `blog.html`.
 
-- **blog.html**: Página de ejemplo que ilustra estructura básica de un blog (encabezados, párrafos, enlaces, imágenes).
-- **notes.txt**: Notas rápidas, recordatorios o apuntes relacionados con los ejercicios.
-- **imagenes/**: Carpeta donde se almacenan los recursos gráficos (fotos, iconos, imágenes usadas en `blog.html`).
+Ruta: [html.fundamentos/README.md](html.fundamentos/README.md)
 
-Ruta del README dentro del proyecto: [html.fundamentos/README.md](html.fundamentos/README.md)
+## Rápido inicio (local)
 
-## Cómo ver el proyecto localmente
+1) Abrir `blog.html` directamente (doble clic) para una vista rápida.
 
-1. Abrir `blog.html` en un navegador moderno (Chrome, Firefox, Edge, Safari).
-   - Doble clic en `blog.html` o usar el menú `Abrir con...`.
+2) Servir localmente (recomendado):
 
-2. (Recomendado) Usar un servidor local para evitar problemas con rutas relativas o políticas de seguridad del navegador. Desde PowerShell o CMD, ejecutar:
+```powershell
+cd html.fundamentos
+python -m http.server 8000
 
-    cd html.fundamentos
-    python -m http.server 8000
+# Luego abrir http://localhost:8000/blog.html
+```
 
-Luego abrir `http://localhost:8000/blog.html` en el navegador.
+O usar la extensión Live Server en Visual Studio Code para recarga automática.
 
-Si no tiene Python instalado, puede instalar la extensión Live Server en Visual Studio Code y usarla para servir la carpeta.
+## Estética y recursos (hazlo llamativo)
 
-## Convenciones y buenas prácticas
+- Paleta recomendada: un fondo suave con acentos vibrantes (#6C63FF, #00C2FF, #FF6B6B).
+- Tipografía sugerida: `Inter`, `Poppins` o `Roboto` para un look moderno.
+- Sombra y microinteracciones: usa `box-shadow` ligero y transiciones `all .2s ease`.
 
-- **Codificación:** Usar UTF-8 para archivos HTML y de texto.
-- **Estructura semántica:** Emplear etiquetas semánticas (`header`, `main`, `article`, `footer`) cuando sea posible.
-- **Rutas relativas:** Referenciar imágenes y recursos con rutas relativas (ej. `imagenes/mi-foto.jpg`) para mantener portabilidad.
-- **Imágenes optimizadas:** Comprimir imágenes antes de añadirlas para reducir tamaño y acelerar carga.
+Ejemplo para enlazar `style.css` desde `blog.html`:
 
-## Edición y flujo de trabajo sugerido
+```html
+<link rel="stylesheet" href="style.css">
+```
 
-- Abrir la carpeta en Visual Studio Code: `Archivo > Abrir carpeta...` y seleccionar `html.fundamentos`.
-- Hacer cambios en `blog.html` y probar en el navegador.
-- Mantener las notas en `notes.txt` con ideas, errores encontrados o pendientes.
+Ejemplo CSS minimal para banner (añádelo a `style.css`):
 
-Comandos útiles (PowerShell):
+```css
+.hero{
+    background: linear-gradient(90deg,#6C63FF 0%, #00C2FF 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(44, 64, 124, .15);
+}
+```
 
-    # Abrir VS Code en la carpeta actual
-    code .
+## Fragmentos útiles
 
-    # Iniciar servidor simple con Python
-    python -m http.server 8000
+- Botón con efecto hover:
+
+```html
+<button class="btn">Leer más</button>
+```
+
+```css
+.btn{background:#FF6B6B;color:#fff;padding:.6rem 1rem;border-radius:8px;border:0;transition:transform .18s}
+.btn:hover{transform:translateY(-3px)}
+```
 
 ## Cómo contribuir
 
-- Hacer una copia local del repo y editar los archivos en `html.fundamentos`.
-- Añadir nuevas páginas o ejemplos dentro de la carpeta `html.fundamentos`.
-- Mantener la estructura y documentar cambios en `notes.txt` o creando nuevos archivos `README` en subcarpetas si hace falta.
-
-Si desea que revise o añada ejemplo(s) adicionales (plantillas, CSS básico, o ejemplos de formularios), abra un issue o pídamelo directamente.
+- Editar o añadir nuevas páginas dentro de la carpeta `html.fundamentos`.
+- Añadir ejemplos de CSS o pequeños scripts y documentarlos en `notes.txt`.
+- Si quieres puedo generar un `starter.css` o mejorar `blog.html` con un layout responsivo.
 
 ## Licencia
 
-Este repositorio no incluye una licencia explícita por defecto. Si desea añadir una licencia (por ejemplo, MIT), puedo generarla. Indique cuál prefiere.
+No hay licencia por defecto. Si deseas una, te puedo añadir una (por ejemplo MIT).
 
 ## Autor y contacto
 
-- Autor: propietario del repositorio (local).
-- Contacto: puede añadirse aquí si necesita que yo incorpore un bloque con nombre y correo.
+- Propietario local del repositorio. Si quieres, indícame el nombre y correo y lo añado aquí.
 
-## Notas finales
+---
 
-- Este proyecto está diseñado para ser simple y pedagógico. Si quiere que lo amplíe con CSS, JavaScript o una guía de ejercicios paso a paso, dígame y lo añado.
+¿Quieres que además genere un `style.css` de ejemplo con la paleta sugerida y un header `hero` listo para usar? Responde "sí" y lo creo en `html.fundamentos/style.css`.
